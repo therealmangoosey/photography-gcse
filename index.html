@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The complete Photography GCSE resource for Year 9 students — real examples, photographer research, resources, and how to get top marks.">
+<title>Photography GCSE — Complete Student Resource</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --cream:   #faf6ef;
+  --white:   #ffffff;
+  --ink:     #1c1409;
+  --coral:   #e04f2a;
+  --gold:    #f0a500;
+  --teal:    #1a8080;
+  --teal-lt: #e4f4f4;
+  --blush:   #fde8df;
+  --muted:   #7a6a58;
+  --border:  #e5ddd0;
+  --font-d:  'Syne', sans-serif;
+  --font-b:  'DM Sans', sans-serif;
+  --r:       5px;
+  --t:       0.2s ease;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:var(--cream); color:var(--ink); font-family:var(--font-b); font-weight:300; font-size:16px; line-height:1.85; overflow-x:hidden; }
+
+h1,h2,h3,h4 { font-family:var(--font-d); line-height:1.1; }
+h1 { font-size:clamp(2.8rem,8vw,5.5rem); font-weight:800; }
+h2 { font-size:clamp(1.5rem,4vw,2.1rem); font-weight:700; }
+h3 { font-size:1rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--coral); }
+h4 { font-size:1rem; font-weight:700; color:var(--ink); font-family:var(--font-b); }
+p { max-width:68ch; margin-bottom:1rem; }
+p:last-child { margin-bottom:0; }
+strong { font-weight:600; }
+em { font-style:italic; color:var(--teal); }
+a { color:var(--coral); text-decoration:none; font-weight:500; }
+a:hover { text-decoration:underline; }
+mark { background:#fff3b0; color:var(--ink); padding:.05em .25em; border-radius:2px; }
+
+.container { max-width:920px; margin:0 auto; padding:0 1.5rem; }
+
+/* ---- HEADER ---- */
+header { background:var(--ink); color:var(--white); padding:4.5rem 1.5rem 3.5rem; text-align:center; position:relative; overflow:hidden; }
+header::before { content:''; position:absolute; top:-100px; right:-100px; width:380px; height:380px; border-radius:50%; background:var(--coral); opacity:.18; pointer-events:none; }
+header::after { content:''; position:absolute; bottom:-70px; left:-60px; width:260px; height:260px; border-radius:50%; background:var(--gold); opacity:.15; pointer-events:none; }
+.hslash { position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none; overflow:hidden; }
+.hslash::before { content:''; position:absolute; top:-20%; left:62%; width:2px; height:200%; background:rgba(255,255,255,.06); transform:rotate(-15deg); }
+.hslash::after { content:''; position:absolute; top:-20%; left:72%; width:1px; height:200%; background:rgba(255,255,255,.04); transform:rotate(-15deg); }
+.hinner { position:relative; z-index:1; }
+.eyebrow { display:inline-block; font-family:var(--font-d); font-size:.65rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold); margin-bottom:1.25rem; padding:.3rem 1rem; border:1px solid rgba(240,165,0,.4); border-radius:2px; }
+header h1 { color:var(--white); margin-bottom:.75rem; }
+header h1 span { color:var(--coral); }
+.hsub { font-size:.95rem; color:rgba(255,255,255,.5); max-width:440px; margin:0 auto; }
+.hbar { height:5px; background:linear-gradient(90deg,var(--coral),var(--gold),var(--teal)); }
+
+/* ---- PAGE NAV ---- */
+.page-nav { background:var(--white); border-bottom:2px solid var(--ink); position:sticky; top:0; z-index:100; }
+.page-nav-inner { display:flex; overflow-x:auto; scrollbar-width:none; max-width:920px; margin:0 auto; }
+.page-nav-inner::-webkit-scrollbar { display:none; }
+.pnav-btn { flex-shrink:0; padding:.85rem 1.25rem; background:none; border:none; border-bottom:3px solid transparent; font-family:var(--font-d); font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); cursor:pointer; transition:color var(--t), border-color var(--t); white-space:nowrap; }
+.pnav-btn:hover { color:var(--ink); }
+.pnav-btn.active { color:var(--coral); border-bottom-color:var(--coral); }
+.pnav-btn:focus-visible { outline:2px solid var(--coral); outline-offset:-2px; }
+
+/* ---- PAGES ---- */
+.page { display:none; }
+.page.active { display:block; }
+
+/* ---- SECTIONS ---- */
+section { padding:3rem 0 2.5rem; border-bottom:1px solid var(--border); scroll-margin-top:2rem; position:relative; }
+section:last-of-type { border-bottom:none; }
+.sh { display:flex; align-items:flex-start; gap:1rem; margin-bottom:1.75rem; }
+.snum { font-family:var(--font-d); font-size:4.5rem; font-weight:800; line-height:.85; color:var(--border); flex-shrink:0; margin-top:.1em; user-select:none; }
+.sh h2 { margin-top:.25em; }
+
+/* ---- CALLOUT ---- */
+.callout { background:var(--ink); color:var(--white); padding:1.5rem 1.75rem; margin:1.75rem 0; border-radius:var(--r); font-size:1rem; line-height:1.7; position:relative; overflow:hidden; }
+.callout::before { content:''; position:absolute; top:-30px; right:-30px; width:100px; height:100px; border-radius:50%; background:var(--coral); opacity:.2; pointer-events:none; }
+.callout::after { content:''; position:absolute; bottom:-20px; left:-20px; width:70px; height:70px; border-radius:50%; background:var(--gold); opacity:.2; pointer-events:none; }
+.callout p, .callout span, .callout strong { position:relative; z-index:1; }
+.callout em { color:var(--gold); }
+
+/* ---- TIPS ---- */
+.tip { background:var(--blush); border-left:4px solid var(--coral); padding:1.1rem 1.25rem; margin:1.5rem 0; border-radius:0 var(--r) var(--r) 0; font-size:.9rem; }
+.tip-teal { background:var(--teal-lt); border-left-color:var(--teal); }
+.tip-gold { background:#fff8e1; border-left-color:var(--gold); }
+.tlabel { font-family:var(--font-d); font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:var(--coral); display:block; margin-bottom:.4rem; font-weight:700; }
+.tip-teal .tlabel { color:var(--teal); }
+.tip-gold .tlabel { color:#b07a00; }
+
+/* ---- STRIPE DIVIDER ---- */
+.stripe { width:44px; height:4px; background:linear-gradient(90deg,var(--coral),var(--gold)); margin:1.25rem 0; border-radius:2px; }
+
+/* ---- GALLERY ---- */
+.gallery-header { background:var(--white); border:2px solid var(--ink); padding:1.75rem 2rem; margin-bottom:2rem; border-radius:var(--r); position:relative; overflow:hidden; }
+.gallery-header::before { content:''; position:absolute; bottom:-50px; right:-50px; width:180px; height:180px; border-radius:50%; background:var(--gold); opacity:.15; pointer-events:none; }
+.gallery-header p { color:var(--muted); margin-top:.5rem; }
+.gallery-pair { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2.5rem; }
+.gitem { display:flex; flex-direction:column; gap:.6rem; }
+.gitem img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; border:2px solid var(--ink); border-radius:var(--r); background:var(--border); }
+.gcap { font-family:var(--font-d); font-size:.7rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted); font-weight:700; }
+
+/* ---- CARD GRIDS ---- */
+.grid-3 { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; margin:1.5rem 0; }
+.grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin:1.5rem 0; }
+.grid-4 { display:grid; grid-template-columns:repeat(auto-fill,minmax(185px,1fr)); gap:1rem; margin:1.5rem 0; }
+
+.card { background:var(--white); border:1px solid var(--border); padding:1.1rem 1.25rem; border-radius:var(--r); contain:layout style; }
+.card-coral { border-top:3px solid var(--coral); }
+.card-gold { border-left:4px solid var(--gold); border-radius:0 var(--r) var(--r) 0; }
+.card-teal { border-top:3px solid var(--teal); }
+
+.card-label { font-family:var(--font-d); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:.3rem; font-weight:700; }
+.card-title { font-family:var(--font-d); font-size:1rem; font-weight:700; color:var(--ink); margin-bottom:.4rem; display:block; }
+.card p { font-size:.85rem; color:var(--muted); margin:0; line-height:1.65; }
+
+/* AO cards */
+.ao-card { display:flex; gap:1rem; align-items:flex-start; }
+.ao-num { font-family:var(--font-d); font-size:3.5rem; font-weight:800; line-height:1; color:var(--border); flex-shrink:0; }
+.ao-label { font-family:var(--font-d); font-size:1rem; font-weight:700; letter-spacing:.06em; color:var(--teal); margin-bottom:.2rem; display:block; }
+
+/* Triangle */
+.tri-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.5rem 0; }
+.tri-cell { background:var(--white); border:1px solid var(--border); padding:1.25rem; border-radius:var(--r); position:relative; overflow:hidden; contain:layout style; }
+.tri-cell::after { content:''; position:absolute; bottom:-20px; right:-20px; width:60px; height:60px; border-radius:50%; background:var(--gold); opacity:.12; pointer-events:none; }
+.tri-lbl { font-family:var(--font-d); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:.4rem; font-weight:700; }
+.tri-title { font-family:var(--font-d); font-size:1.4rem; font-weight:700; color:var(--coral); margin-bottom:.5rem; display:block; position:relative; z-index:1; }
+.tri-cell p { font-size:.83rem; color:var(--muted); margin:0; line-height:1.65; position:relative; z-index:1; }
+
+/* Pills */
+.pills { display:flex; flex-wrap:wrap; gap:.5rem; margin:1.25rem 0; }
+.pill { background:var(--white); border:2px solid var(--ink); color:var(--ink); padding:.3rem .85rem; font-family:var(--font-d); font-size:.78rem; letter-spacing:.05em; font-weight:700; border-radius:2px; }
+.pill-coral { border-color:var(--coral); color:var(--coral); background:var(--blush); }
+.pill-teal { border-color:var(--teal); color:var(--teal); background:var(--teal-lt); }
+.pill-gold { border-color:var(--gold); color:#a06800; background:#fff8e1; }
+
+/* Quote */
+.quote { border-left:4px solid var(--gold); padding:1rem 1.5rem; margin:1.5rem 0; background:var(--white); border-radius:0 var(--r) var(--r) 0; }
+.quote p { font-style:italic; font-size:.95rem; color:var(--ink); margin-bottom:.4rem; }
+.quote-source { font-family:var(--font-d); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700; }
+
+/* School tag */
+.school-tag { display:inline-block; background:var(--blush); color:var(--coral); font-family:var(--font-d); font-size:.62rem; letter-spacing:.15em; text-transform:uppercase; padding:.2rem .6rem; border-radius:2px; margin-bottom:.5rem; font-weight:700; }
+.school-tag-teal { background:var(--teal-lt); color:var(--teal); }
+
+/* Resource row */
+.resource-row { display:flex; gap:1rem; align-items:flex-start; padding:1rem 0; border-bottom:1px solid var(--border); }
+.resource-row:last-child { border-bottom:none; }
+.resource-icon { font-size:1.4rem; flex-shrink:0; width:2.5rem; text-align:center; margin-top:.15rem; }
+.resource-body h4 { font-size:.9rem; margin-bottom:.2rem; }
+.resource-body p { font-size:.83rem; color:var(--muted); margin:0; }
+
+/* Photographer grid */
+.photo-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1rem; margin:1.5rem 0; }
+.photo-card { background:var(--white); border:1px solid var(--border); padding:1.1rem 1.25rem; border-radius:var(--r); border-left:4px solid var(--teal); contain:layout style; }
+.photo-name { font-family:var(--font-d); font-size:1rem; font-weight:700; color:var(--ink); display:block; margin-bottom:.2rem; }
+.photo-known { font-size:.75rem; font-weight:600; color:var(--teal); letter-spacing:.05em; text-transform:uppercase; margin-bottom:.4rem; display:block; }
+.photo-card p { font-size:.83rem; color:var(--muted); margin:0; line-height:1.6; }
+
+/* Grade band */
+.grade-band { display:flex; align-items:stretch; gap:0; border-radius:var(--r); overflow:hidden; border:1px solid var(--border); margin:1.5rem 0; }
+.grade-num { font-family:var(--font-d); font-size:2.5rem; font-weight:800; background:var(--ink); color:var(--white); padding:1rem 1.25rem; display:flex; align-items:center; justify-content:center; min-width:3.5rem; flex-shrink:0; }
+.grade-body { padding:1rem 1.25rem; background:var(--white); flex:1; }
+.grade-body h4 { font-size:.9rem; margin-bottom:.35rem; }
+.grade-body p { font-size:.83rem; color:var(--muted); margin:0; line-height:1.6; }
+
+/* Light grid */
+.light-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:1rem; margin:1.5rem 0; }
+.light-card { background:var(--white); border:1px solid var(--border); border-top:3px solid var(--teal); padding:.9rem 1rem; border-radius:var(--r); contain:layout style; }
+.light-dir { font-family:var(--font-d); font-size:.95rem; font-weight:700; color:var(--ink); display:block; margin-bottom:.2rem; }
+.light-card p { font-size:.8rem; color:var(--muted); margin:0; line-height:1.55; }
+
+/* Back to top */
+.btn-top { display:inline-flex; align-items:center; gap:.5rem; margin-top:2rem; background:var(--ink); color:var(--white); border:none; font-family:var(--font-d); font-size:.8rem; letter-spacing:.15em; text-transform:uppercase; font-weight:700; padding:.7rem 1.5rem; cursor:pointer; border-radius:var(--r); transition:background var(--t); }
+.btn-top:hover { background:var(--coral); }
+.btn-top:focus-visible { outline:2px solid var(--coral); outline-offset:2px; }
+
+/* Footer */
+footer { background:var(--ink); color:rgba(255,255,255,.35); padding:3rem 1.5rem; text-align:center; margin-top:4rem; position:relative; overflow:hidden; }
+footer::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; border-radius:50%; background:var(--coral); opacity:.12; pointer-events:none; }
+footer::after { content:''; position:absolute; bottom:-40px; left:-40px; width:140px; height:140px; border-radius:50%; background:var(--gold); opacity:.12; pointer-events:none; }
+.ftitle { font-family:var(--font-d); font-size:1.8rem; font-weight:800; color:rgba(255,255,255,.75); margin-bottom:.4rem; position:relative; z-index:1; }
+.fsub { font-size:.78rem; letter-spacing:.1em; position:relative; z-index:1; }
+
+/* ---- FADE IN ---- */
+section, .page-intro { transition:opacity .5s ease, transform .5s ease; }
+.js-ready section, .js-ready .page-intro { opacity:0; transform:translateY(14px); }
+.js-ready section.visible, .js-ready .page-intro.visible { opacity:1; transform:none; }
+
+/* ---- MOBILE ---- */
+@media (max-width:640px) {
+  header { padding:3rem 1.5rem 2.5rem; }
+  .tri-grid, .grid-2 { grid-template-columns:1fr; }
+  .gallery-pair { grid-template-columns:1fr; }
+  .grid-3, .grid-4, .photo-grid { grid-template-columns:1fr; }
+  .light-grid { grid-template-columns:repeat(2,1fr); }
+  .snum { font-size:3rem; }
+  .grade-band { flex-direction:column; }
+  .grade-num { min-width:auto; padding:.7rem 1.25rem; font-size:2rem; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  section,.page-intro,.js-ready section,.js-ready .page-intro,.js-ready section.visible,.js-ready .page-intro.visible { opacity:1!important; transform:none!important; transition:none!important; }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hslash"></div>
+  <div class="hinner">
+    <p class="eyebrow">Year 9 Preparation &nbsp;·&nbsp; Year 10–11 GCSE</p>
+    <h1>Photography<br><span>GCSE</span></h1>
+    <p class="hsub">Everything you need — before, during, and throughout the course</p>
+  </div>
+</header>
+<div class="hbar"></div>
+
+<!-- ============================================================ PAGE NAV ============================================================ -->
+<nav class="page-nav" aria-label="Site pages">
+  <div class="page-nav-inner">
+    <button class="pnav-btn active" onclick="showPage('p-start')">The Basics</button>
+    <button class="pnav-btn" onclick="showPage('p-course')">How the Course Works</button>
+    <button class="pnav-btn" onclick="showPage('p-examples')">Real Examples</button>
+    <button class="pnav-btn" onclick="showPage('p-photographers')">Photographers to Study</button>
+    <button class="pnav-btn" onclick="showPage('p-resources')">Where to Look</button>
+    <button class="pnav-btn" onclick="showPage('p-grades')">How to Get Top Marks</button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     PAGE 1 — THE BASICS
+     ============================================================ -->
+<div id="p-start" class="page active">
+<div class="container">
+
+  <section>
+    <div class="gallery-header">
+      <div class="sh" style="margin-bottom:0">
+        <span class="snum" aria-hidden="true" style="color:rgba(240,165,0,.22)">★</span>
+        <div>
+          <h2>Real Student Work From This School</h2>
+          <p>These are genuine GCSE photography coursework boards made here. Look at the range — <em>this is what you're working towards</em>, and it's more achievable than it looks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-pair">
+      <div class="gitem">
+        <img src="https://i.ibb.co/1CPB7jN/IMG-20260225-175818.jpg"
+             alt="Student coursework board — mixed media photography with digital collage and painted marks"
+             loading="eager" fetchpriority="high" decoding="async">
+        <span class="gcap">Board 1 — Mixed Media &amp; Portraiture</span>
+      </div>
+      <div class="gitem">
+        <img src="https://i.ibb.co/Gv1WwCGM/IMG-20260225-175815.jpg"
+             alt="Student coursework board — cyanotype printing, light painting, alphabet photography"
+             loading="lazy" decoding="async">
+        <span class="gcap">Board 2 — Alternative Processes &amp; Experiments</span>
+      </div>
+    </div>
+
+    <h3>What are these students doing?</h3>
+    <div class="stripe"></div>
+    <div class="grid-3">
+      <div class="card card-coral">
+        <div class="card-label">Board 1</div>
+        <span class="card-title">Mixed Media Collage</span>
+        <p>Photos layered with <strong>painted marks, newspaper, and drawing</strong>. Photography used as raw material, not just documentation.</p>
+      </div>
+      <div class="card card-coral">
+        <div class="card-label">Board 1</div>
+        <span class="card-title">Digital Manipulation</span>
+        <p><strong>Flowing paint overlays and pixelation effects</strong> added in post. Editing software used as a creative tool.</p>
+      </div>
+      <div class="card card-coral">
+        <div class="card-label">Board 1</div>
+        <span class="card-title">Architecture &amp; Perspective</span>
+        <p><strong>Looking straight up</strong> at buildings. A single angle change transforms an ordinary scene completely.</p>
+      </div>
+      <div class="card card-coral">
+        <div class="card-label">Board 2</div>
+        <span class="card-title">Cyanotype Printing</span>
+        <p><strong>UV light and chemistry</strong> making blue-and-white prints — a 19th-century process still used in GCSE work today.</p>
+      </div>
+      <div class="card card-coral">
+        <div class="card-label">Board 2</div>
+        <span class="card-title">Light Painting</span>
+        <p>Long exposures in darkness. <strong>Shutter speed used creatively</strong> — spelling words and drawing with light.</p>
+      </div>
+      <div class="card card-coral">
+        <div class="card-label">Board 2</div>
+        <span class="card-title">Contact Sheets</span>
+        <p>A <strong>grid of thumbnails showing your selection process</strong>. Required evidence of working practice — examiners look for these.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>The most important thing these boards show is <strong>process</strong>. Every student documented their thinking, showed experimentation, and connected ideas. The final images matter — but the <em>journey to reach them matters just as much</em>.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">01</span>
+      <h2>What Photography GCSE Actually Is</h2>
+    </div>
+
+    <div class="callout">
+      <p><strong>Photography GCSE is not just about taking nice pictures.</strong> It is an art subject — assessed exactly like Art &amp; Design. Your process, research, and experimentation count for as much as your final images.</p>
+    </div>
+
+    <p>The course sits within the art and design family of GCSEs. You will be developing creative thinking, visual communication, and showing a clear journey from a starting point to a finished piece. The two exam boards most commonly used in UK schools are <mark>AQA</mark> and <mark>Eduqas</mark> — ask your teacher which one your school follows, as the structure differs slightly.</p>
+
+    <div class="tip">
+      <span class="tlabel">Grade Breakdown</span>
+      <strong>60% Coursework</strong> — a portfolio of work built across Year 10 and early Year 11 exploring themes you develop with your teacher.<br><br>
+      <strong>40% Externally Set Assignment (Exam)</strong> — the board sends a paper in January of Year 11 with around seven themed starting points. You choose one, prepare for several weeks, then complete a <mark>10-hour supervised session</mark> (usually across two school days) to produce your final piece.
+    </div>
+
+    <p>Every piece of work is assessed against <strong>four Assessment Objectives</strong>:</p>
+
+    <div class="grid-2">
+      <div class="card ao-card">
+        <div class="ao-num" aria-hidden="true">1</div>
+        <div>
+          <span class="ao-label">Record</span>
+          <p class="card p">Observe and document ideas from your experience, imagination, and the world around you.</p>
+        </div>
+      </div>
+      <div class="card ao-card">
+        <div class="ao-num" aria-hidden="true">2</div>
+        <div>
+          <span class="ao-label">Develop</span>
+          <p class="card p">Experiment with ideas, explore the work of other photographers, and build on what you find.</p>
+        </div>
+      </div>
+      <div class="card ao-card">
+        <div class="ao-num" aria-hidden="true">3</div>
+        <div>
+          <span class="ao-label">Refine</span>
+          <p class="card p">Use skills, materials, and techniques with increasing <strong>control and intention</strong> — not just chance.</p>
+        </div>
+      </div>
+      <div class="card ao-card">
+        <div class="ao-num" aria-hidden="true">4</div>
+        <div>
+          <span class="ao-label">Present</span>
+          <p class="card p">Share a resolved, personal, and meaningful outcome that clearly communicates your ideas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">02</span>
+      <h2>Why Start Preparing in Year 9</h2>
+    </div>
+
+    <p>Most students walk into Photography GCSE on the first day of Year 10 knowing almost nothing. The students who do well are the ones who <strong>already understand the basics</strong> — aperture, composition, light — before the course begins.</p>
+
+    <p><em>Photography GCSE moves faster than people expect.</em> Teachers introduce concepts quickly and expect you to apply them almost immediately. If you already understand how a camera works and how light behaves, you can focus on the creative and analytical side — <strong>where the high marks actually live</strong>.</p>
+
+    <div class="tip">
+      <span class="tlabel">The real advantage of starting early</span>
+      Year 9 is time to make mistakes <strong>without pressure</strong>. Take hundreds of bad photos. Develop your <mark>photographic eye</mark> — the ability to see interesting images in everyday life. This is a skill that takes months to build, and you can't rush it.
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">03</span>
+      <h2>Camera Basics Before Day One</h2>
+    </div>
+
+    <h3>The Exposure Triangle</h3>
+    <div class="stripe"></div>
+    <p>Every photo is made by light hitting a sensor. <strong>Three settings control how much light reaches it</strong> — change one, adjust the others. Together, these are the <mark>exposure triangle</mark>.</p>
+
+    <div class="tri-grid">
+      <div class="tri-cell">
+        <div class="tri-lbl">Setting 1</div>
+        <span class="tri-title">Aperture</span>
+        <p><strong>f/2.8</strong> = wide, lots of light, <em>blurry background</em>. <strong>f/16</strong> = narrow, sharp front-to-back. One of your most powerful creative controls.</p>
+      </div>
+      <div class="tri-cell">
+        <div class="tri-lbl">Setting 2</div>
+        <span class="tri-title">Shutter Speed</span>
+        <p><strong>1/1000s</strong> freezes motion. <strong>Several seconds</strong> creates blur and light trails — exactly what produces the light painting work you saw above.</p>
+      </div>
+      <div class="tri-cell">
+        <div class="tri-lbl">Setting 3</div>
+        <span class="tri-title">ISO</span>
+        <p><strong>100</strong> = clean, needs light. <strong>3200+</strong> = works in dark but adds grain. Keep it <em>as low as possible</em>.</p>
+      </div>
+    </div>
+
+    <h3>Other Essentials</h3>
+    <div class="stripe"></div>
+
+    <p><strong>Focus</strong> — Choose which focus point is active rather than letting the camera decide. Manual focus is essential for macro and low-light work.</p>
+    <p><strong>White Balance</strong> — Different lights have different colour temperatures. Understand it so you can control — or creatively misuse — colour casts.</p>
+    <p><strong>Modes</strong> — Learn <mark>Aperture Priority</mark>, <mark>Shutter Priority</mark>, and <mark>Manual</mark>. Your teacher will expect to see you using these, not Auto.</p>
+
+    <div class="tip tip-teal">
+      <span class="tlabel">RAW vs JPEG</span>
+      <strong>RAW</strong> holds far more data, looks flat straight out of camera, but gives you much more editing control. <strong>JPEG</strong> is compressed and ready to share immediately. <em>If your camera shoots RAW, learn to use it.</em>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">04</span>
+      <h2>Understanding Light</h2>
+    </div>
+
+    <div class="callout">
+      <p>The word "photography" literally means <strong>writing with light</strong>. Two photos of the same subject in different light can look completely different. <em>Learning to see light is the single most important skill you will develop.</em></p>
+    </div>
+
+    <p><mark>Golden hour</mark> — the hour after sunrise and before sunset — gives warm, soft, directional light. <strong>Midday sun is harsh</strong> and creates strong shadows. <strong>Overcast days</strong> are a natural diffuser — perfect for portraits and macro work.</p>
+
+    <div class="light-grid">
+      <div class="light-card"><span class="light-dir">Front</span><p>Flat and even. Safe but can look uninteresting.</p></div>
+      <div class="light-card"><span class="light-dir">Side</span><p><strong>Adds depth and texture.</strong> Usually the most dramatic option.</p></div>
+      <div class="light-card"><span class="light-dir">Back</span><p>Creates silhouettes or a glowing rim around the subject.</p></div>
+      <div class="light-card"><span class="light-dir">Top</span><p>Deep shadows under features. Dramatic or unflattering.</p></div>
+      <div class="light-card"><span class="light-dir">Bottom</span><p>Unnatural and eerie — rarely seen in nature.</p></div>
+    </div>
+
+    <p><strong>Hard light</strong> (bright sun, bare flash) creates sharp, defined shadows. <strong>Soft light</strong> (overcast sky, softbox) creates gradual, gentle transitions. <em>Neither is better — they are different tools for different intentions.</em></p>
+  </section>
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">05</span>
+      <h2>Composition</h2>
+    </div>
+
+    <div class="callout">
+      <p><strong>Composition is what separates a snapshot from a photograph.</strong> It is the one skill you can practise today, on any camera, with zero technical knowledge.</p>
+    </div>
+
+    <div class="pills" role="list">
+      <span class="pill" role="listitem">Rule of Thirds</span>
+      <span class="pill" role="listitem">Leading Lines</span>
+      <span class="pill" role="listitem">Natural Framing</span>
+      <span class="pill" role="listitem">Symmetry &amp; Pattern</span>
+      <span class="pill" role="listitem">Foreground Depth</span>
+      <span class="pill" role="listitem">Negative Space</span>
+      <span class="pill" role="listitem">Fill the Frame</span>
+      <span class="pill" role="listitem">Unusual Angles</span>
+      <span class="pill" role="listitem">Visual Balance</span>
+      <span class="pill" role="listitem">Colour Relationships</span>
+    </div>
+
+    <p><strong>Rule of Thirds</strong> — Place your subject at the intersections of an imaginary grid, rather than dead centre. <strong>Leading lines</strong> draw the eye through the frame — roads, fences, rivers, corridors. <strong>Negative space</strong> gives subjects room to breathe and forces focus on what matters. <strong>Change your viewpoint</strong> — shooting low makes subjects feel powerful; shooting high makes them look small or vulnerable.</p>
+
+    <p><strong>Colour</strong> — Warm tones (red, orange, yellow) feel energetic. Cool tones (blue, green) feel calm. <mark>Complementary colours</mark> like blue and orange create contrast; <mark>analogous colours</mark> like blue and teal create harmony.</p>
+  </section>
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">06</span>
+      <h2>Equipment</h2>
+    </div>
+
+    <div class="callout">
+      <p><strong>The camera matters far less than the person using it.</strong> A skilled photographer with a phone will produce better work than an unskilled photographer with an expensive DSLR. Every time.</p>
+    </div>
+
+    <p><strong>Your phone is absolutely fine</strong> to start. Modern phones have multiple lenses and sophisticated processing. If you have one, you can start learning right now.</p>
+    <p><strong>Your school will likely provide</strong> DSLR or mirrorless cameras, studio lighting, tripods, and editing software. Ask your teacher before buying anything.</p>
+    <p><strong>If you want your own camera:</strong> A <mark>second-hand entry-level DSLR</mark> (Canon or Nikon, from the last ten years) costs £100–£200 including a kit lens. A <mark>50mm prime lens</mark> (around £80–£100 second-hand) is an excellent addition — it forces you to move your feet instead of zooming.</p>
+
+    <div class="tip tip-teal">
+      <span class="tlabel">Editing software</span>
+      <strong>Adobe Lightroom</strong> is the standard — free through many schools. <strong>Photoshop</strong> handles complex compositing. Free alternatives: <strong>Darktable</strong> (Lightroom equivalent) and <strong>GIMP</strong> (Photoshop equivalent) are both excellent. <em>Start learning one before Year 10.</em>
+    </div>
+
+    <div style="text-align:center"><button class="btn-top" onclick="scrollToTop()">↑ Back to top</button></div>
+  </section>
+
+</div>
+</div>
+
+<!-- ============================================================
+     PAGE 2 — HOW THE COURSE WORKS
+     ============================================================ -->
+<div id="p-course" class="page">
+<div class="container">
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">—</span>
+      <h2>How the Course Actually Works</h2>
+    </div>
+
+    <p>Here is the reality of what Year 10 and Year 11 look like — based on what schools across the UK describe to their students. Every school is slightly different, but the structure is largely the same.</p>
+
+    <div class="tip tip-gold">
+      <span class="tlabel">Which exam board?</span>
+      The two most common are <strong>AQA</strong> (used widely across England) and <strong>Eduqas</strong> (used in many Welsh schools and some English ones). Both have the same four Assessment Objectives and the same 60/40 coursework/exam split — the main difference is in what themes come up in the exam paper and how coursework is structured. <em>Ask your teacher which one your school uses.</em>
+    </div>
+  </section>
+
+  <section>
+    <h3>Year 10 — What Schools Say</h3>
+    <div class="stripe"></div>
+
+    <div class="quote">
+      <p>"Students will explore basic camera skills, darkroom, mixed media — and then produce an experimental individual response. In the second project, students focus on surrealist portrait photographers such as John Stezaker and Shirin Neshat before combining elements of their chosen photographers to produce a personal response."</p>
+      <span class="quote-source">The Heathland School, Hounslow</span>
+    </div>
+
+    <div class="quote">
+      <p>"We follow themes like 'Natural and Man Made' and 'My World' — exploring portraiture, location and studio photography, experimental imagery, documentary photography, photojournalism, film, and fashion photography. This gives pupils the opportunity to explore areas that show career potential."</p>
+      <span class="quote-source">Fernwood School, Nottinghamshire</span>
+    </div>
+
+    <div class="quote">
+      <p>"The minimum expectation is a finished sketchbook page per week. We have a range of cameras and industry-standard software in our studios. If you have access to a camera or camera phone at home, that will be extremely beneficial."</p>
+      <span class="quote-source">Fernwood School — advice to students</span>
+    </div>
+
+    <p>The pattern across most schools is the same: <strong>Year 10 starts with skills-building projects</strong> — you might do studio photography, darkroom work, camera skills, and artist study — then you move into your <strong>personal portfolio project</strong> where you develop your own theme with more creative freedom.</p>
+
+    <div class="tip">
+      <span class="tlabel">Practical reality</span>
+      At <strong>Tudor Grange Academy, Solihull</strong>, Year 10 begins with digital SLR workshops and manual technique, then moves to "'In the Style of'" projects where students take inspiration from specific photographers and produce responses. This is the model used widely across the country — <em>learning through doing in the style of others before finding your own voice</em>.
+    </div>
+  </section>
+
+  <section>
+    <h3>Year 11 — The Exam Unit</h3>
+    <div class="stripe"></div>
+
+    <p>In <strong>January of Year 11</strong>, your school receives the externally set paper from the exam board. This contains around seven different starting points — broad themes like <em>Symmetry</em>, <em>Celebration</em>, <em>Fragmentation</em>, or <em>Low Light</em>. You choose one.</p>
+
+    <p>From January until the exam in spring, you work on your <strong>preparatory work</strong>: researching photographers, doing experimental shoots, annotating your ideas, and developing toward your final piece.</p>
+
+    <div class="quote">
+      <p>"Question papers are issued in January. The exam paper has approximately seven different starting points covering a range of techniques including digital photography, mixed media, fashion photography, culturally diverse photography, graphic design, and installation art. Students choose one question to develop over three months, then sit a ten-hour exam over two days."</p>
+      <span class="quote-source">King Ethelbert School, Kent (Eduqas board)</span>
+    </div>
+
+    <div class="quote">
+      <p>"From January, your focus needs to be on preparing for the exam — however, you may continue to make improvements to your coursework outside of lessons, which makes sense as it is 60% of your grade."</p>
+      <span class="quote-source">Photography with Miss Wilson — teacher resource</span>
+    </div>
+
+    <p>The <strong>10-hour exam</strong> usually takes place across two full school days in April or May. You work in your art rooms and computer rooms. For the entire 10 hours, you are producing your final piece — the work you've prepared for over the past few months.</p>
+
+    <div class="tip">
+      <span class="tlabel">Grays Convent, Essex — a typical Year 11 structure</span>
+      Students begin a new project in January based on the AQA exam themes. They select photographers and artists for research and inspiration, produce a range of experiments and records of ideas, then work on their final piece during a 10-hour, two-day examination in May.
+    </div>
+  </section>
+
+  <section>
+    <h3>What Teachers Expect From You</h3>
+    <div class="stripe"></div>
+
+    <div class="quote">
+      <p>"Spend at least two hours each week on homework. Visit London art and photography galleries. Use Photoshop to manipulate your images and develop your ideas. Learn how to control aperture, shutter speed, and ISO as soon as possible and implement this in your photography. Research photographers, create images in their style, write about how they created their work and give your opinion on it."</p>
+      <span class="quote-source">The Heathland School, Hounslow — advice to students</span>
+    </div>
+
+    <div class="grid-3">
+      <div class="card card-gold">
+        <span class="card-title">Take photos constantly</span>
+        <p>Outside of lessons. At home, on your way to school, at the weekend. The more you shoot, the faster your eye develops.</p>
+      </div>
+      <div class="card card-gold">
+        <span class="card-title">Annotate everything</span>
+        <p>Write about your decisions. Why did you choose this angle? What does this photographer's work make you feel? Annotation is a direct Assessment Objective requirement.</p>
+      </div>
+      <div class="card card-gold">
+        <span class="card-title">Attend extra sessions</span>
+        <p>Tudor Grange notes explicitly: "spending time outside lessons, including attendance in extra-curricular sessions, is an integral part of the course."</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Common Coursework Themes Used by UK Students</h3>
+    <div class="stripe"></div>
+
+    <p>These are real project themes used in GCSE Photography coursework across UK schools and mentioned in student resources and school documentation:</p>
+
+    <div class="pills">
+      <span class="pill pill-coral">Identity</span>
+      <span class="pill pill-coral">Urban Decay</span>
+      <span class="pill pill-coral">Sense of Place</span>
+      <span class="pill pill-coral">Natural Forms</span>
+      <span class="pill pill-coral">People &amp; Places</span>
+      <span class="pill pill-coral">Light &amp; Dark</span>
+      <span class="pill pill-coral">Fragmentation</span>
+      <span class="pill pill-coral">Layers</span>
+      <span class="pill pill-coral">Symmetry</span>
+      <span class="pill pill-coral">Low Light Photography</span>
+      <span class="pill pill-coral">Connections</span>
+      <span class="pill pill-coral">Memory</span>
+      <span class="pill pill-coral">The Human Form</span>
+      <span class="pill pill-coral">Illusions</span>
+      <span class="pill pill-coral">Materials &amp; Texture</span>
+      <span class="pill pill-coral">Out of Place</span>
+    </div>
+
+    <div class="tip tip-teal">
+      <span class="tlabel">Choosing a theme — advice from teachers</span>
+      "Always choose something you have a genuine interest in — so you don't get bored — and something you have regular access to — so it is realistic to take photos within the theme." <em>Photography with Miss Wilson</em>. <br><br>
+      A student on The Student Room who was struggling with "Out of Place" found the best approach was to <strong>make a mind map first</strong>: "I'd write every single thing you associate with it. I would take a surrealist approach — combining landscape and portraiture."
+    </div>
+
+    <div style="text-align:center"><button class="btn-top" onclick="scrollToTop()">↑ Back to top</button></div>
+  </section>
+
+</div>
+</div>
+
+<!-- ============================================================
+     PAGE 3 — REAL EXAMPLES
+     ============================================================ -->
+<div id="p-examples" class="page">
+<div class="container">
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">—</span>
+      <h2>Real GCSE Projects — What Students Have Done</h2>
+    </div>
+
+    <p>These are real GCSE Photography project examples from across the UK, sourced from publicly available student portfolios, school websites, and teacher resources. They show the range of what is possible and what gets high marks.</p>
+  </section>
+
+  <section>
+    <h3>Grade Examples — What Each Level Looks Like</h3>
+    <div class="stripe"></div>
+
+    <p>The website <em>Photography with Miss Wilson</em> (a widely used UK teacher resource) publishes grade-specific project walkthroughs. Here is what they show:</p>
+
+    <div class="grade-band">
+      <div class="grade-num">9</div>
+      <div class="grade-body">
+        <h4>The top grade — what it requires</h4>
+        <p>Students consistently link every experiment to a named photographer (AO1), try a wide range of techniques including digital manipulation, mixed media, and alternative processes (AO2), annotate every decision clearly and reflectively (AO3), and present a resolved final piece that feels genuinely personal (AO4). The sketchbook is well-organised and the examiner can follow a clear creative journey from start to finish.</p>
+      </div>
+    </div>
+
+    <div class="grade-band">
+      <div class="grade-num" style="background:var(--teal)">6</div>
+      <div class="grade-body">
+        <h4>Grade 6 — Low Light Photography project</h4>
+        <p>One documented Grade 6 project (AQA Component 2) explored <strong>low light photography</strong>, drawing inspiration from photographers <em>Liam Wong, Jan Staller, and Robert Brook</em>. The student photographed cityscapes, bridges, and night-time scenes and developed vibrant atmospheric edits using street lighting and colour overlays. It also included <strong>drawing work to plan compositions</strong> — the examiner specifically noted this as demonstrating the ability to record and refine ideas visually.</p>
+      </div>
+    </div>
+
+    <div class="grade-band">
+      <div class="grade-num" style="background:var(--gold); color:var(--ink)">5</div>
+      <div class="grade-body">
+        <h4>Grade 5 — Layers project</h4>
+        <p>A documented Grade 5 AQA project explored the theme <strong>Layers</strong>, using digital editing, architectural photography, and photo manipulation. Photographers studied included <em>Idris Khan, Anastasia Savinova, and Alessio Trerotoli</em>. The project showed strong experimentation but the annotation connecting experiments back to artist influence was less thorough than would be needed for higher grades.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <p>The pattern across all graded examples is clear: <strong>the difference between a 5 and a 9 is almost entirely in the annotation and the artist research</strong> — not in the technical quality of the photographs. Students who explain their decisions, link their work to photographers, and document their thinking consistently outscore those who only focus on producing great images.</p>
+    </div>
+  </section>
+
+  <section>
+    <h3>Real Student Experiences — From The Student Room UK</h3>
+    <div class="stripe"></div>
+
+    <p>The Student Room is the UK's largest student community. Here is what Photography GCSE students have said about their experience:</p>
+
+    <div class="quote">
+      <p>"Most of the GCSE consists of researching artists and reviewing your work — that's basically what gets you the grades. You have to be prepared to do quite a lot of work outside the classroom, writing up your practical work and researching for the images. Most of the time you take photos outside of school because you have control over your own project."</p>
+      <span class="quote-source">GCSE Photography student, The Student Room</span>
+    </div>
+
+    <div class="quote">
+      <p>"I know people in my class who get 9s in every bit of their coursework, but I don't really try as hard and put things off until the last minute and still get 7s. So if you basically understand what you're doing, it will be fine."</p>
+      <span class="quote-source">GCSE Photography student, The Student Room</span>
+    </div>
+
+    <div class="quote">
+      <p>"Follow the criteria. My teacher gave us a detailed checklist of the exam coursework specifications. Stick it in the front of your sketchbook and constantly refer to it. I religiously followed these criteria sheets and was only a few marks off an A."</p>
+      <span class="quote-source">Former GCSE Photography student, The Student Room</span>
+    </div>
+  </section>
+
+  <section>
+    <h3>What Schools Have Said About the Course</h3>
+    <div class="stripe"></div>
+
+    <div class="quote">
+      <p>"Photography is increasingly popular as a GCSE choice. The third highest sector of employment in the UK is in the creative industries, and graduates of creative studies make up to 70% employment in high-paid jobs."</p>
+      <span class="quote-source">Fernwood School, Nottinghamshire</span>
+    </div>
+
+    <div class="quote">
+      <p>"Photography has many career links in today's society: media, the film industry, journalism, sports photography, medical photography, theatre design, fashion, and interior design."</p>
+      <span class="quote-source">Tudor Grange Academy, Solihull</span>
+    </div>
+
+    <div class="quote">
+      <p>"We expect your work to be exhibited in school, in local exhibitions, and we enter students in national competitions."</p>
+      <span class="quote-source">King Ethelbert School, Kent</span>
+    </div>
+
+    <div class="quote">
+      <p>"Throughout the two years, there are opportunities to experience a range of photography styles — from using the professional photography studio and lighting set-ups to being experimental in the darkroom and manually developing your own photographs."</p>
+      <span class="quote-source">The Heathland School, Hounslow</span>
+    </div>
+
+    <div class="quote">
+      <p>"Students will visit the Tate Modern gallery in Central London to explore the work of contemporary artists and photographers."</p>
+      <span class="quote-source">The Heathland School, Hounslow — Year 10 programme</span>
+    </div>
+
+    <p>Across the UK, schools consistently emphasise that <strong>this is an art subject, not a technical one</strong>. The creative industries are one of the fastest-growing parts of the UK economy, and Photography GCSE is directly relevant to careers in photography, design, media, fashion, journalism, film, and theatre.</p>
+
+    <div style="text-align:center"><button class="btn-top" onclick="scrollToTop()">↑ Back to top</button></div>
+  </section>
+
+</div>
+</div>
+
+<!-- ============================================================
+     PAGE 4 — PHOTOGRAPHERS TO STUDY
+     ============================================================ -->
+<div id="p-photographers" class="page">
+<div class="container">
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">—</span>
+      <h2>Photographers to Research and Study</h2>
+    </div>
+
+    <div class="callout">
+      <p><strong>25% of your marks come from artist research.</strong> Choosing the right photographers to study — and writing about them properly — is one of the highest-impact things you can do. These are the photographers most commonly referenced in AQA and Eduqas GCSE resources across the UK.</p>
+    </div>
+
+    <div class="tip tip-teal">
+      <span class="tlabel">How to choose your photographers</span>
+      When picking artists for your exam project: <em>"Do you really like their work? Do you have lots of ideas for your own work inspired by their style? Is the style and technique a suitable level of challenge? Are they a professional photographer with their own website? Do the two artists work well together?"</em> — Photography with Miss Wilson (UK teacher resource).
+    </div>
+  </section>
+
+  <section>
+    <h3>Portrait &amp; People Photography</h3>
+    <div class="stripe"></div>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <span class="photo-name">Annie Leibovitz</span>
+        <span class="photo-known">Portraiture / Celebrity</span>
+        <p>World-famous for powerful, dramatic portraits. Her work combines psychology with visual spectacle. <strong>A go-to reference for the portrait theme.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Nan Goldin</span>
+        <span class="photo-known">Documentary / Intimate Portraiture</span>
+        <p>Known for raw, intimate images of people in everyday life. Highlights personal, often difficult moments. Referenced frequently for Identity and People themes.</p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Richard Avedon</span>
+        <span class="photo-known">Portraiture / Fashion</span>
+        <p>Stark, clean portrait style — subjects against plain white backgrounds. Captures character and vulnerability. <strong>Excellent for the Human Form theme.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Cindy Sherman</span>
+        <span class="photo-known">Conceptual Self-Portrait</span>
+        <p>Photographs herself in different costumes and characters, exploring identity and the construction of the female image. <strong>A favourite for Identity projects.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Shirin Neshat</span>
+        <span class="photo-known">Identity / Culture / Portrait</span>
+        <p>Powerful black-and-white portraits overlaid with Farsi text, exploring Iranian identity and female experience. Used at The Heathland School, Hounslow.</p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">John Stezaker</span>
+        <span class="photo-known">Surrealism / Collage</span>
+        <p>Combines vintage film stills and landscapes in unsettling collages. <strong>Referenced by schools for mixed media and surrealist portrait projects.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Landscape, Place &amp; Environment</h3>
+    <div class="stripe"></div>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <span class="photo-name">Ansel Adams</span>
+        <span class="photo-known">Landscape / Black &amp; White</span>
+        <p>Iconic large-format black-and-white images of the American wilderness. <strong>The reference point for dramatic landscape photography.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Edward Burtynsky</span>
+        <span class="photo-known">Industrial Landscape / Environment</span>
+        <p>Large-scale aerial images of industrial landscapes showing the human impact on nature. <strong>Referenced for Environment and Materials themes.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Fan Ho</span>
+        <span class="photo-known">Urban / Symmetry / Light</span>
+        <p>Cinematic black-and-white images of 1950s–60s Hong Kong — dramatic light, geometry, and symmetry. Referenced for Symmetry and Sense of Place projects.</p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Michael Kenna</span>
+        <span class="photo-known">Minimalist Landscape</span>
+        <p>Long-exposure landscapes with perfectly balanced, almost abstract compositions. <strong>Go-to for Symmetry and minimalist work.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Dorothea Lange</span>
+        <span class="photo-known">Documentary / Memory</span>
+        <p>Iconic documentary photographer of the 1930s Great Depression. Her images carry strong emotional weight and historical resonance. <strong>Referenced for Memory and Documentary themes.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Street, Documentary &amp; Social</h3>
+    <div class="stripe"></div>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <span class="photo-name">Henri Cartier-Bresson</span>
+        <span class="photo-known">Street Photography</span>
+        <p>The founder of modern street photography. Coined the "<em>decisive moment</em>" — the perfect fraction of a second that captures a scene's essence.</p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Martin Parr</span>
+        <span class="photo-known">British Social Documentary</span>
+        <p>Satirical, colourful images of British seaside life and consumerism. <strong>Excellent for Connections and documentary projects.</strong> Very well known in UK schools.</p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Steve McCurry</span>
+        <span class="photo-known">Documentary / Portraiture</span>
+        <p>Known for the iconic <em>Afghan Girl</em> — one of the most recognisable portraits in photographic history. <strong>Referenced for Emotion and People projects.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Alex Webb</span>
+        <span class="photo-known">Street / Colour</span>
+        <p>Vibrant, layered street photography with complex use of colour and light. <strong>Referenced for Celebration and cultural photography.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Elliott Erwitt</span>
+        <span class="photo-known">Street / Humour</span>
+        <p>Joyful, humorous black-and-white images of everyday situations. Known for photographing dogs alongside humans in unexpected ways.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Abstract, Experimental &amp; Conceptual</h3>
+    <div class="stripe"></div>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <span class="photo-name">Man Ray</span>
+        <span class="photo-known">Surrealism / Experimental</span>
+        <p>Pioneered techniques like the rayograph (photogram without a camera) and solarisation. <strong>Ideal for experimental and alternative process projects.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">David Hockney</span>
+        <span class="photo-known">Photo Collage / Fragmentation</span>
+        <p>Created "joiners" — photographic collages that fragment and reassemble a subject from multiple viewpoints. <strong>Directly referenced for Fragmentation and Layers themes.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Eadweard Muybridge</span>
+        <span class="photo-known">Motion / Time</span>
+        <p>Pioneered photographic studies of movement in the 1870s–1880s. <strong>Referenced for Movement and Time themes.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Idris Khan</span>
+        <span class="photo-known">Layering / Abstraction</span>
+        <p>Stacks multiple photographs into a single image, creating layered, almost musical compositions. <strong>Referenced for the Layers project described in grade examples above.</strong></p>
+      </div>
+      <div class="photo-card">
+        <span class="photo-name">Liam Wong</span>
+        <span class="photo-known">Night / Neon / Urban</span>
+        <p>Cinematic neon-lit night photography, heavily influenced by cyberpunk aesthetics. <strong>Referenced in the Grade 6 Low Light Photography project described on the Examples page.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>Matching Photographers to Themes</h3>
+    <div class="stripe"></div>
+    <p>A quick reference to help you find the right photographers for your project theme:</p>
+
+    <div class="grid-3">
+      <div class="card card-teal">
+        <span class="card-title">Identity / Human Form</span>
+        <p>Cindy Sherman, Nan Goldin, Shirin Neshat, Richard Avedon, Annie Leibovitz</p>
+      </div>
+      <div class="card card-teal">
+        <span class="card-title">Fragmentation / Layers</span>
+        <p>David Hockney, Man Ray, Idris Khan, László Moholy-Nagy, Anastasia Savinova</p>
+      </div>
+      <div class="card card-teal">
+        <span class="card-title">Light &amp; Dark / Low Light</span>
+        <p>Liam Wong, Fan Ho, Man Ray, Jan Staller, Robert Brook</p>
+      </div>
+      <div class="card card-teal">
+        <span class="card-title">Symmetry / Pattern</span>
+        <p>Michael Kenna, Fan Ho, Bernd &amp; Hilla Becher, M.C. Escher (as visual reference)</p>
+      </div>
+      <div class="card card-teal">
+        <span class="card-title">Environment / Place</span>
+        <p>Edward Burtynsky, Ansel Adams, Dorothea Lange, James Balog, Martin Parr</p>
+      </div>
+      <div class="card card-teal">
+        <span class="card-title">Movement / Time</span>
+        <p>Eadweard Muybridge, Chris Jordan, Alex Webb, Henri Cartier-Bresson</p>
+      </div>
+    </div>
+
+    <div style="text-align:center"><button class="btn-top" onclick="scrollToTop()">↑ Back to top</button></div>
+  </section>
+
+</div>
+</div>
+
+<!-- ============================================================
+     PAGE 5 — WHERE TO LOOK
+     ============================================================ -->
+<div id="p-resources" class="page">
+<div class="container">
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">—</span>
+      <h2>Where to Find Inspiration &amp; Examples</h2>
+    </div>
+
+    <p>These are the real places — online and in person — where UK students and teachers say to go for GCSE Photography inspiration. All of these are free or free to visit.</p>
+  </section>
+
+  <section>
+    <h3>Websites &amp; Online Resources</h3>
+    <div class="stripe"></div>
+
+    <div class="resource-row">
+      <div class="resource-icon">🌐</div>
+      <div class="resource-body">
+        <h4><a href="https://photographywithmisswilson.weebly.com" target="_blank" rel="noopener">Photography with Miss Wilson</a></h4>
+        <p>One of the most widely referenced UK teacher resources for GCSE Photography. Contains grade examples (Grade 5 and Grade 6 project walkthroughs), theme inspiration, photographer lists, annotation guides, and AQA specification breakdowns. <strong>Genuinely useful — teachers recommend it directly.</strong></p>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <div class="resource-icon">🌐</div>
+      <div class="resource-body">
+        <h4><a href="https://www.studentartguide.com" target="_blank" rel="noopener">Student Art Guide</a></h4>
+        <p>Publishes detailed case studies of high-scoring GCSE and A-Level art and photography projects from around the world, with sketchbook pages shown clearly. <strong>Excellent for understanding how portfolios should look and how pages are laid out.</strong></p>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <div class="resource-icon">🌐</div>
+      <div class="resource-body">
+        <h4><a href="https://www.aqa.org.uk/subjects/art-and-design/gcse/art-and-design-8206/assessment-resources" target="_blank" rel="noopener">AQA Assessment Resources</a></h4>
+        <p>The official AQA page for GCSE Photography (code 8206). Contains past exam papers, mark schemes, and examiner reports. Reading an examiner report tells you <strong>exactly what examiners want to see</strong> — and what they penalise. Free to access.</p>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <div class="resource-icon">📌</div>
+      <div class="resource-body">
+        <h4><a href="https://uk.pinterest.com" target="_blank" rel="noopener">Pinterest</a></h4>
+        <p>Consistently recommended by both students and teachers for GCSE photography inspiration. Search "GCSE photography sketchbook", the name of a photographer, or your theme. One art teacher at Burnt Mill even created a public board of <strong>500 GCSE Photography ideas</strong>. Also useful for studying layout and presentation ideas.</p>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <div class="resource-icon">🌐</div>
+      <div class="resource-body">
+        <h4><a href="https://www.thestudentroom.co.uk" target="_blank" rel="noopener">The Student Room</a></h4>
+        <p>The UK's largest student forum. Search "GCSE Photography" for honest first-person accounts of what the course is actually like, advice from former students, and discussions about themes and techniques. <strong>Real peer experience — not just official guidance.</strong></p>
+      </div>
+    </div>
+
+    <div class="resource-row">
+      <div class="resource-icon">🎥</div>
+      <div class="resource-body">
+        <h4>YouTube — GCSE Photography Project Walkthroughs</h4>
+        <p>Several UK teachers post full project walkthroughs on YouTube. Search "AQA GCSE Photography Grade 9 project" or "GCSE Photography portfolio walkthrough". Watching these shows you how a real portfolio is structured page by page. <strong>The Miss Wilson channel is particularly recommended.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>UK Galleries — Free to Visit</h3>
+    <div class="stripe"></div>
+
+    <p>Schools across the UK — particularly in London — specifically recommend visiting these galleries as part of the course. Many schools make organised trips. All of the following are <strong>free to enter</strong>.</p>
+
+    <div class="grid-3">
+      <div class="card card-gold">
+        <span class="card-title">The Photographers' Gallery</span>
+        <p><strong>London, Soho</strong>. The UK's largest gallery dedicated entirely to photography. Regularly changing exhibitions of contemporary and historical work. <em>Free on certain days.</em> Directly recommended by Heathland School, Hounslow.</p>
+      </div>
+      <div class="card card-gold">
+        <span class="card-title">National Portrait Gallery</span>
+        <p><strong>London, Trafalgar Square</strong>. Free entry. Extensive collection of portrait photography alongside paintings — excellent for portrait and identity research. Reopened after major refurbishment in 2023.</p>
+      </div>
+      <div class="card card-gold">
+        <span class="card-title">Tate Modern</span>
+        <p><strong>London, Bankside</strong>. Free entry to the permanent collection. The Heathland School takes Year 10 students here at the start of the course to explore contemporary photographers and artists. Strong photography collection.</p>
+      </div>
+      <div class="card card-gold">
+        <span class="card-title">V&amp;A Museum</span>
+        <p><strong>London, South Kensington</strong>. Free entry. Huge photography collection — from early daguerreotypes to contemporary digital work. Particularly strong for fashion photography research.</p>
+      </div>
+      <div class="card card-gold">
+        <span class="card-title">Saatchi Gallery</span>
+        <p><strong>London, Chelsea</strong>. Free entry. Focuses on contemporary art including photography and mixed media — the kind of conceptual work that overlaps significantly with what GCSE examiners want to see.</p>
+      </div>
+      <div class="card card-gold">
+        <span class="card-title">Your Local Gallery</span>
+        <p>If you're not near London — every major UK city has free art galleries. Manchester has the Whitworth; Leeds has the Henry Moore Institute; Birmingham has the Ikon. <strong>Search "[your city] free art gallery".</strong></p>
+      </div>
+    </div>
+
+    <div class="tip">
+      <span class="tlabel">If you visit a gallery</span>
+      Photograph the work you find interesting on your phone. Write a short note about <em>what it made you feel</em> and <em>what techniques the photographer used</em>. This is exactly the kind of annotation that feeds directly into AO1 — and examiners love to see evidence that you visited real exhibitions.
+    </div>
+  </section>
+
+  <section>
+    <h3>Useful Websites for Photographer Research</h3>
+    <div class="stripe"></div>
+
+    <p>These are the specific sites recommended by The Heathland School, Hounslow directly to their GCSE Photography students for researching photographers:</p>
+
+    <div class="pills">
+      <span class="pill pill-teal">tate.org.uk</span>
+      <span class="pill pill-teal">theroyalacademy.org.uk</span>
+      <span class="pill pill-teal">npg.org.uk</span>
+      <span class="pill pill-teal">nationalgallery.org.uk</span>
+      <span class="pill pill-teal">saatchigallery.com</span>
+      <span class="pill pill-teal">thephotographersgallery.org.uk</span>
+      <span class="pill pill-teal">metmuseum.org</span>
+      <span class="pill pill-teal">moma.org</span>
+    </div>
+
+    <p style="margin-top:1rem">When researching a photographer online, always go to their <strong>official website</strong> first, then the gallery websites above, then museum collections. Avoid using other students' work as a reference — you can't cite it and it often misrepresents the original photographer's intent.</p>
+
+    <div style="text-align:center"><button class="btn-top" onclick="scrollToTop()">↑ Back to top</button></div>
+  </section>
+
+</div>
+</div>
+
+<!-- ============================================================
+     PAGE 6 — HOW TO GET TOP MARKS
+     ============================================================ -->
+<div id="p-grades" class="page">
+<div class="container">
+
+  <section>
+    <div class="sh">
+      <span class="snum" aria-hidden="true">—</span>
+      <h2>How to Get Top Marks</h2>
+    </div>
+
+    <div class="callout">
+      <p>The students who get the highest marks are not necessarily the best photographers. <strong>They are the students who understand what examiners are looking for — and deliver it consistently.</strong> This page tells you exactly what that is.</p>
+    </div>
+  </section>
+
+  <section>
+    <h3>The Grade Boundaries — 2024 (AQA)</h3>
+    <div class="stripe"></div>
+
+    <p>These were the AQA GCSE Photography (specification 8206) grade boundaries for the 2024 examination series, published by Photography with Miss Wilson from official AQA data:</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-label">2024 Grade Boundaries</div>
+        <div style="margin-top:.5rem">
+          <div style="display:flex;justify-content:space-between;padding:.3rem 0;border-bottom:1px solid var(--border)"><span style="font-family:var(--font-d);font-weight:700">Grade 9</span><span style="color:var(--muted);font-size:.85rem">Highest band</span></div>
+          <div style="display:flex;justify-content:space-between;padding:.3rem 0;border-bottom:1px solid var(--border)"><span style="font-family:var(--font-d);font-weight:700">Grade 7</span><span style="color:var(--muted);font-size:.85rem">Strong pass</span></div>
+          <div style="display:flex;justify-content:space-between;padding:.3rem 0;border-bottom:1px solid var(--border)"><span style="font-family:var(--font-d);font-weight:700">Grade 4</span><span style="color:var(--muted);font-size:.85rem">Standard pass</span></div>
+          <div style="display:flex;justify-content:space-between;padding:.3rem 0"><span style="font-family:var(--font-d);font-weight:700">Grade 1</span><span style="color:var(--muted);font-size:.85rem">40 marks (raw)</span></div>
+        </div>
+        <p style="margin-top:.75rem;font-size:.8rem;color:var(--muted)">Note that boundaries increase by a mark or two most years. Always check the current year's official AQA documentation.</p>
+      </div>
+      <div class="card">
+        <div class="card-label">What this means</div>
+        <p style="font-size:.85rem">The marks come from a combination of your coursework (60%) and your exam component (40%). Both are marked against the same four Assessment Objectives. <strong>Getting a consistent balance across all four AOs is more important than excelling at one or two.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>The Most Important Habits — What Actually Gets You Marks</h3>
+    <div class="stripe"></div>
+
+    <div class="grid-3">
+      <div class="card card-coral">
+        <span class="card-title">Annotate everything</span>
+        <p><strong>This is the single biggest differentiator between grades.</strong> Write about every decision: why you chose this angle, what this photographer's work made you feel, what you tried and what didn't work. Annotation directly addresses AO1 and AO3.</p>
+      </div>
+      <div class="card card-coral">
+        <span class="card-title">Link to photographers constantly</span>
+        <p>Every experiment and every shoot should reference a named photographer. <em>"Inspired by Martin Parr's use of colour…"</em> or <em>"Taking Cindy Sherman's approach to constructed identity…"</em>. AO1 requires demonstrated critical understanding of sources — 25% of your marks.</p>
+      </div>
+      <div class="card card-coral">
+        <span class="card-title">Show failed experiments</span>
+        <p>Do not hide work that didn't go well. Showing what didn't work and <strong>explaining why</strong>, and what you tried differently, is direct evidence of AO2 (Refine) and AO3 (Record). Examiners reward documented thinking.</p>
+      </div>
+      <div class="card card-coral">
+        <span class="card-title">Use a checklist</span>
+        <p>Get your teacher to give you the mark scheme criteria and stick it in the front of your sketchbook. Refer to it constantly. <em>"I religiously followed these criteria sheets and was only a few marks off an A"</em> — former student on The Student Room.</p>
+      </div>
+      <div class="card card-coral">
+        <span class="card-title">Present clearly</span>
+        <p>A clean, well-organised sketchbook <strong>can boost your grade</strong>. The examiner should be able to follow your creative journey easily. Good presentation makes your thinking legible — and legible thinking gets marked.</p>
+      </div>
+      <div class="card card-coral">
+        <span class="card-title">Sketchbook: one page per week minimum</span>
+        <p>Fernwood School states this directly as their minimum expectation. The portfolio builds across two years — if you fall behind, catching up becomes extremely difficult under the pressure of Year 11 exams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h3>How to Write About a Photographer — AO1</h3>
+    <div class="stripe"></div>
+
+    <p>Writing about photographers is the part most students find hardest. Here is the structure used by Photography with Miss Wilson in their teacher resources — a reliable framework that addresses the Assessment Objective directly:</p>
+
+    <div class="tip tip-teal">
+      <span class="tlabel">Photographer analysis framework</span>
+      <strong>"The photographer I have chosen is…"</strong><br>
+      "Having read about their photography, I have learnt that…"<br>
+      "When I look at [photographer]'s photographs, I can see…"<br>
+      "One of the reasons I have chosen this photographer is because I like…"<br>
+      "I will take inspiration from their work by…"
+    </div>
+
+    <p>The key things to cover in any photographer analysis: <strong>who they are and when they worked</strong>; <strong>what their subject matter or theme is</strong>; <strong>the technical choices they make</strong> (light, composition, aperture, colour); <strong>the mood or feeling their work creates</strong>; and <strong>what you specifically will take from their work into your own photography</strong>.</p>
+
+    <p><em>The last point is the most important</em> — and the most commonly missed. You are not writing an essay about the photographer; you are documenting how they will influence your own work.</p>
+  </section>
+
+  <section>
+    <h3>How to Write Your Final Evaluation</h3>
+    <div class="stripe"></div>
+
+    <p>At the end of a project, you will write a final evaluation. Here is the structure from Photography with Miss Wilson:</p>
+
+    <div class="tip">
+      <span class="tlabel">Final evaluation structure</span>
+      <strong>1. What was the title and how did you develop it?</strong> What approach did you take?<br><br>
+      <strong>2. Which artists inspired your project and how?</strong> Be specific.<br><br>
+      <strong>3. What did you experiment with?</strong> What techniques and materials?<br><br>
+      <strong>4. What is the idea behind your final series?</strong> How does it bring together the best parts of the project?<br><br>
+      <strong>5. How did you create your final images?</strong> Technical process.<br><br>
+      <strong>6. Strengths and areas for development.</strong> Be honest — self-criticism shows maturity.
+    </div>
+
+    <p><em>"No one-word answers. Explain yourself fully and expand on your answers as much as you can."</em> — Photography with Miss Wilson</p>
+  </section>
+
+  <section>
+    <h3>Preparing for the 10-Hour Exam</h3>
+    <div class="stripe"></div>
+
+    <div class="quote">
+      <p>"You must consider the date of the exam a final deadline — you will not have access to your websites outside of exam times. From January, your focus needs to be on preparing for the exam."</p>
+      <span class="quote-source">Photography with Miss Wilson — Year 11 exam prep</span>
+    </div>
+
+    <p>The exam is not the time to have new ideas. <strong>Every creative decision should already be made during the preparation period.</strong> The 10 hours are for executing a plan you have already developed thoroughly. Students who walk in with a clear vision and detailed preparation consistently outperform those who improvise on the day.</p>
+
+    <div class="grid-3">
+      <div class="card card-teal">
+        <span class="card-title">Choose your theme carefully</span>
+        <p>Pick the theme you have the most genuine interest in and the most practical access to. You will spend three months with it.</p>
+      </div>
+      <div class="card card-teal">
+        <span class="card-title">Do two planning pages per artist</span>
+        <p>One page of drawing and planning for each photographer you're working in the style of — including diagrams of composition and lighting setups.</p>
+      </div>
+      <div class="card card-teal">
+        <span class="card-title">Do a mind map first</span>
+        <p>Before shooting anything, list every association you have with the theme. This is where ideas come from. Teachers often run this as a whole-class exercise at the start of the exam unit.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center"><button class="btn-top" onclick="scrollToTop()">↑ Back to top</button></div>
+  </section>
+
+</div>
+</div>
+
+<footer>
+  <div class="ftitle">Photography GCSE</div>
+  <div class="fsub">Complete Student Resource &nbsp;·&nbsp; Prepared for Year 9 &amp; Year 10 Students<br>Sources: AQA, Eduqas, The Student Room, Photography with Miss Wilson, school curriculum pages across England</div>
+</footer>
+
+<script>
+  document.body.classList.add('js-ready');
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.pnav-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    const idx = ['p-start','p-course','p-examples','p-photographers','p-resources','p-grades'].indexOf(id);
+    document.querySelectorAll('.pnav-btn')[idx].classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    observePage();
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function observePage() {
+    if (reducedMotion) {
+      document.querySelectorAll('section, .page-intro').forEach(el => el.classList.add('visible'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.04 });
+    document.querySelectorAll('.page.active section, .page.active .page-intro').forEach(el => {
+      el.classList.remove('visible');
+      io.observe(el);
+    });
+  }
+
+  observePage();
+</script>
+</body>
+</html>
